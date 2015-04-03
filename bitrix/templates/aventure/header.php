@@ -44,11 +44,14 @@ foreach ($localJs as $js)
 		?>
 		<title><?php $APPLICATION->ShowTitle()?></title>
 	</head>
-	<body class="main_page">		
-		<div id="main">
+	<body class="<?php echo CSite::InDir(SITE_DIR) ? 'main_page' : ''; ?>">		
+		<div id="main">			
 			<header>
+				<div class="admin_panel">
+				<?php $APPLICATION->ShowPanel(); ?>
+				</div>
 				<div class="logo">
-					<a href="/">
+					<a href="<?php echo SITE_DIR ?>">
 						<img src="<?php echo SITE_TEMPLATE_PATH.'/img/logo.png'?>" alt="<?php echo $arSite['SITE_NAME'] ?>">
 					</a>
 					<a href="#form_send_review" class="top_link_review win">Оставить отзыв</a>
@@ -56,23 +59,40 @@ foreach ($localJs as $js)
 				<div class="top_contacts">
 					<div class="center clearfix">
 						<div class="top_contacts_left">
-							<span>+7 (351) 235-12-35,  +7 (351) 260-57-52 &nbsp; / <a href="#">все телефоны</a> /</span>
+							<span><?php 
+								$APPLICATION->IncludeFile("include_areas/header_phones.html", array(), array(
+										'SHOW_BORDER' => true,
+										'MODE' => 'text'
+								)); 
+							?> &nbsp; / <a href="#map">все телефоны</a> /
+							</span>
 						</div>
 						<div class="top_contacts_right">
-							<span>Челябинск, ул. Курчатова, 16 &nbsp; / <a href="#">все адреса</a> /</span>
+							<span><?php 
+								$APPLICATION->IncludeFile("include_areas/header_adr.html", array(), array(
+										'SHOW_BORDER' => true,
+										'MODE' => 'text'
+								)); 
+							?> &nbsp; / <a href="#map">все адреса</a> /</span>
 						</div>
 					</div>
 				</div>
 				<nav class="menu clearfix">
-					<ul>
-						<li><a href="#">О компании</a></li>
-						<li><a href="#">Отзывы о нас</a></li>
-						<li><a href="#">Акции</a></li>
-						<li><a href="#">Контакты</a></li>
-						<li><a href="#">Агентствам</a></li>
-						<li><a href="#">Блог о туризме</a></li>
-					</ul>
+					<?php $APPLICATION->IncludeComponent("bitrix:menu","main", Array(
+					        "ROOT_MENU_TYPE" => "top", 
+					        "MAX_LEVEL" => "1", 
+					        "CHILD_MENU_TYPE" => "top", 
+					        "USE_EXT" => "N",
+					        "DELAY" => "N",
+					        "ALLOW_MULTI_SELECT" => "N",
+					        "MENU_CACHE_TYPE" => "N", 
+					        "MENU_CACHE_TIME" => "3600", 
+					        "MENU_CACHE_USE_GROUPS" => "Y", 
+					        "MENU_CACHE_GET_VARS" => "" 
+					    )
+					);?>				
 				</nav>
+				
 			</header>
 			<div id="content">
 				

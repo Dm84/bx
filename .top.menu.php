@@ -13,6 +13,34 @@ $aMenuLinks = Array(
 		Array(), 
 		Array(), 
 		"" 
+	),
+	Array(
+		"Акции", 
+		"/actions", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Блог о туризме", 
+		"/blog", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Агентствам", 
+		"/to_agencies", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Контакты", 
+		"/contacts", 
+		Array(), 
+		Array(), 
+		"" 
 	)
 );
 ?>
