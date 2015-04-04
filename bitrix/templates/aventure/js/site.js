@@ -58,7 +58,7 @@ jQuery(document).ready(function() {
 //				$('.why_we .bls_centered_header a').addClass('show_border');
 //		}
 //	});
-	})();
+//	})();
 	
 	(function(){
 		var $originality = $('.main_reviews'),

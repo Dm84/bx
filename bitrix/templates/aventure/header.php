@@ -22,11 +22,6 @@ $localJs = array (
 	'site.js',
 );
 
-foreach ($globJs as $js)
-{
-	$APPLICATION->AddHeadScript($js);	
-}
-
 foreach ($localJs as $js)
 {
 	$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH.'/js/'.$js);
