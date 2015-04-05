@@ -1,6 +1,6 @@
 <section class="why_we">	
 	<div class="center">
-		<div class="bls_centered_header">Почему <a href="/company/">мы</a>?</div>
+		<div class="bls_centered_header">Почему <a href="<?php echo SITE_DIR;?>company/">мы</a>?</div>
 		<div class="bls_container">			
 			<div class="why_we_item">
 				<div class="why_item_count">

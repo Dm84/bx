@@ -60,7 +60,7 @@
 						<div class="reviews_photos">
 							<?php 
 								$photoId = 0;
-								foreach ($photos as $photo):
+								for ($pId = 0; $pId < 2 && $pId < count($photos); ++ $pId):
 									++ $photoId;
 									$info = CFile::GetFileArray($photo);
 									$img = CFile::ResizeImageGet($info, array('width' => 168, 'height' => 126), BX_RESIZE_IMAGE_EXACT);
@@ -68,7 +68,7 @@
 							<div class="review_item_photo">
 								<img src="<?php echo $img['src'] ?>" alt="<?php echo $info['DESCRIPTION']; ?>">
 							</div>
-							<?php if ($photoId == 2) { break; } endforeach; ?>
+							<?php endfor; ?>
 						</div>
 						<?php endif; ?>
 					</div>

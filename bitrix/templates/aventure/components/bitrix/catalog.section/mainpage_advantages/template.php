@@ -1,6 +1,11 @@
 <section class="why_we">	
 	<div class="center">
-		<div class="bls_centered_header">Почему <a class="show_border" href="/company/">мы</a>?</div>
+		<div class="bls_centered_header">
+			Почему 
+			<a class="show_border" href="<?php echo SITE_DIR.'company/'?>">
+				мы
+			</a>?
+		</div>
 		<div class="bls_container">			
 			<?php foreach ($arResult['ITEMS'] as $item): 
 				$this->AddEditAction($item['ID'], $item['EDIT_LINK'], 
