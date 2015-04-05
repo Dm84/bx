@@ -14,3 +14,14 @@
 		"MENU_CACHE_GET_VARS" => array("")
 	)
 );?>
+<?$APPLICATION->IncludeComponent(
+	"bitrix:highloadblock.list",
+	"mainpage_countries",
+	Array(
+		"BLOCK_ID" => "1",
+		"DETAIL_URL" => "/countries/#ID#",
+		"VARIABLES" => array(
+			"SECTION_URL" => "/countries/"
+		)
+	)
+);?>
