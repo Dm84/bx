@@ -61,7 +61,7 @@
 							<?php 
 								$photoId = 0;
 								for ($pId = 0; $pId < 2 && $pId < count($photos); ++ $pId):
-									++ $photoId;
+									$photo = $photos[$pId];
 									$info = CFile::GetFileArray($photo);
 									$img = CFile::ResizeImageGet($info, array('width' => 168, 'height' => 126), BX_RESIZE_IMAGE_EXACT);
 							?>
