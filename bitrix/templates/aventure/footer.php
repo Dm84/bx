@@ -1,63 +1,77 @@
 
 			</div>
 			<footer>
-				<div id="map" class="footer_map">
-					
-				</div>
-				<div class="footer_cont">
-					<div class="center">
-						<div class="footer_contacts">
-							<div class="foot_contacts_item foot_contacts_red">
-								<div class="foot_contacts_container">
-									<div class="foot_contacts_header">1 &nbsp;Основной офис</div>
-									<div class="foot_contacts_left">
-										<p>ул. Курчатова, 16</p>
-										<p>пн-пт 10:00-20:00<br>сб 11:00-15:00</p>
-									</div>
-									<div class="foot_contacts_right">
-										<p>+7 (351) 235-12-35<br> +7 (351) 260-57-52</p>
-										<p><a href="#">все контакты</a></p>
-									</div>
-								</div>
-							</div>
-							<div class="foot_contacts_item foot_contacts_yellow">
-								<div class="foot_contacts_container">
-									<div class="foot_contacts_header">2 Офис делового туризма</div>
-									<div class="foot_contacts_left">
-										<p>ул. Энгельса, 45</p>
-										<p>пн-пт  10:00-19:00<br> сб  11:00-15:00</p>
-									</div>
-									<div class="foot_contacts_right">
-										<p>+7 (351) 235-80-50<br> +7 (351) 235-80-51</p>
-										<p><a href="#">все контакты</a></p>
-									</div>
-								</div>
-							</div>
-							<div class="foot_contacts_item foot_contacts_blue">
-								<div class="foot_contacts_container">
-									<div class="foot_contacts_header">3 Агенство coral travel</div>
-									<div class="foot_contacts_left">
-										<p>ул. Курчатова, 4</p>
-										<p>пн-пт  10:00-19:00<br>сб  11:00-15:00</p>
-									</div>
-									<div class="foot_contacts_right">
-										<p>+7 (351) 235-33-33<br> +7 (351) 237-77-78</p>
-										<p><a href="#">все контакты</a></p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<nav class="footer_menu">
-							<a href="#">О компании</a>
-							<a href="#">Отзывы о нас</a>
-							<a href="#">Акции</a>
-							<a href="#">Блог о туризме</a>
-							<a href="#">Агентствам</a>
-							<a href="#">Контакты</a>
-						</nav>
-						<a href="#" class="link_dev">Разработка<br> и продвижение сайтов</a>
-					</div>
-				</div>
+				<?$APPLICATION->IncludeComponent(
+	"bitrix:catalog.section", 
+	"footer_map", 
+	array(
+		"IBLOCK_TYPE" => "Aventura",
+		"IBLOCK_ID" => "3",
+		"SECTION_ID" => $_REQUEST["SECTION_ID"],
+		"SECTION_CODE" => "",
+		"SECTION_USER_FIELDS" => array(
+			0 => "",
+			1 => "",
+		),
+		"ELEMENT_SORT_FIELD" => "sort",
+		"ELEMENT_SORT_ORDER" => "asc",
+		"ELEMENT_SORT_FIELD2" => "id",
+		"ELEMENT_SORT_ORDER2" => "desc",
+		"FILTER_NAME" => "arrFilter",
+		"INCLUDE_SUBSECTIONS" => "N",
+		"SHOW_ALL_WO_SECTION" => "Y",
+		"PAGE_ELEMENT_COUNT" => "3",
+		"LINE_ELEMENT_COUNT" => "3",
+		"PROPERTY_CODE" => array(),
+		"OFFERS_LIMIT" => "5",
+		"SECTION_URL" => "",
+		"DETAIL_URL" => "",
+		"SECTION_ID_VARIABLE" => "SECTION_ID",
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"AJAX_OPTION_HISTORY" => "N",
+		"CACHE_TYPE" => "A",
+		"CACHE_TIME" => "36000000",
+		"CACHE_GROUPS" => "Y",
+		"SET_TITLE" => "N",
+		"SET_BROWSER_TITLE" => "N",
+		"SET_META_KEYWORDS" => "N",
+		"SET_META_DESCRIPTION" => "N",
+		"ADD_SECTIONS_CHAIN" => "N",
+		"SET_STATUS_404" => "N",
+		"CACHE_FILTER" => "N",
+		"ACTION_VARIABLE" => "action",
+		"PRODUCT_ID_VARIABLE" => "id",
+		"PRICE_CODE" => array(
+		),
+		"USE_PRICE_COUNT" => "N",
+		"SHOW_PRICE_COUNT" => "1",
+		"PRICE_VAT_INCLUDE" => "Y",
+		"BASKET_URL" => "/personal/basket.php",
+		"USE_PRODUCT_QUANTITY" => "N",
+		"ADD_PROPERTIES_TO_BASKET" => "Y",
+		"PRODUCT_PROPS_VARIABLE" => "prop",
+		"PARTIAL_PRODUCT_PROPERTIES" => "N",
+		"PRODUCT_PROPERTIES" => array(
+		),
+		"DISPLAY_COMPARE" => "N",
+		"PAGER_TEMPLATE" => ".default",
+		"DISPLAY_TOP_PAGER" => "N",
+		"DISPLAY_BOTTOM_PAGER" => "Y",
+		"PAGER_TITLE" => "Товары",
+		"PAGER_SHOW_ALWAYS" => "N",
+		"PAGER_DESC_NUMBERING" => "N",
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+		"PAGER_SHOW_ALL" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"BROWSER_TITLE" => "-",
+		"META_KEYWORDS" => "-",
+		"META_DESCRIPTION" => "-",
+		"PRODUCT_QUANTITY_VARIABLE" => "quantity"
+	),
+	false
+);?>				
 			</footer>
 			<div id="form_send_review" class="popup_container" style="display: none;">
 				<div class="popup_header">Оставить отзыв</div>
