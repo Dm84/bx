@@ -1,15 +1,18 @@
 <?php 
-	$icons = array('one', 'two', 'three');
+	$icons = array('one', 'two', 'three', 'four', 'five', 'six', 'seven');
 	
 	$sum_lat = 0.0;
 	$sum_lon = 0.0;
 	$placemarks = array();
 	foreach ($arResult['ITEMS'] as $i => $item)
 	{
+		$ico = CFile::ResizeImageGet($item['PROPERTIES']['baloon']['VALUE'], 
+					array('width' => 28, 'height' => 40), BX_IMAGE_RESIZE_EXACT);
+		
 		$val = $item['PROPERTIES']['map']['VALUE'];
 		$mark = array(
 			'pos' => $val,
-			'ico' => SITE_TEMPLATE_PATH.'/img/ico_contact_map_'.$icons[$i % 3].'.png'
+			'ico' => $ico['src']
 		);
 		$placemarks[] = $mark;
 		
