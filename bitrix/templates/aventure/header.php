@@ -86,8 +86,7 @@ foreach ($localJs as $js)
 					        "MENU_CACHE_GET_VARS" => "" 
 					    )
 					);?>				
-				</nav>
-				
+				</nav>				
 			</header>
 			<div id="content">
 				

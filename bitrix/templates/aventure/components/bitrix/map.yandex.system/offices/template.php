@@ -29,8 +29,6 @@ function init_<?php echo $arParams['MAP_ID']?>()
 	<?php endforeach; ?>
 
 	map.behaviors.disable("scrollZoom");
-	
-	console.log('ok');
 
 <?php
 foreach ($arResult['ALL_MAP_OPTIONS'] as $option => $method)
