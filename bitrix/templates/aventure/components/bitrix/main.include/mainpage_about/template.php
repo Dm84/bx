@@ -42,7 +42,7 @@
 				array('comp' => $component),
 				array(
 					'NAME' => 'Новости',
-					'SHOW_BORDER' => true,
+					'SHOW_BORDER' => false,
 					'MODE' => 'html'
 			)); 
 		?>
@@ -51,7 +51,7 @@
 				array('comp' => $component), 
 				array(
 					'NAME' => 'Соцсети',
-					'SHOW_BORDER' => true,
+					'SHOW_BORDER' => false,
 					'MODE' => 'html'
 			)); 
 		?>		
