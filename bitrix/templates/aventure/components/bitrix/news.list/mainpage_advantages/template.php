@@ -2,7 +2,7 @@
 	<div class="center">
 		<div class="bls_centered_header">
 			Почему 
-			<a class="show_border" href="<?php echo SITE_DIR.'company/'?>">
+			<a class="show_border" href="<?php echo str_replace('#SITE_DIR#/', SITE_DIR, $arResult['LIST_PAGE_URL']); ?>">
 				мы
 			</a>?
 		</div>

@@ -1,82 +1,58 @@
 
 			</div>
 			<footer>
-				<?$APPLICATION->IncludeComponent(
-	"bitrix:catalog.section", 
-	"footer_map", 
-	array(
+				
+	<?$APPLICATION->IncludeComponent(
+	"bitrix:news.list",
+	"footer_map",
+	Array(
 		"IBLOCK_TYPE" => "Aventura",
 		"IBLOCK_ID" => "3",
-		"SECTION_ID" => $_REQUEST["SECTION_ID"],
-		"SECTION_CODE" => "",
-		"SECTION_USER_FIELDS" => array(
-			0 => "",
-			1 => "",
-		),
-		"ELEMENT_SORT_FIELD" => "sort",
-		"ELEMENT_SORT_ORDER" => "asc",
-		"ELEMENT_SORT_FIELD2" => "id",
-		"ELEMENT_SORT_ORDER2" => "desc",
-		"FILTER_NAME" => "arrFilter",
-		"INCLUDE_SUBSECTIONS" => "N",
-		"SHOW_ALL_WO_SECTION" => "Y",
-		"PAGE_ELEMENT_COUNT" => "3",
-		"LINE_ELEMENT_COUNT" => "3",
-		"PROPERTY_CODE" => array(
-			0 => "adr",
-			1 => "phones",
-			2 => "",
-		),
-		"OFFERS_LIMIT" => "5",
-		"SECTION_URL" => "",
+		"NEWS_COUNT" => "0",
+		"SORT_BY1" => "SORT",
+		"SORT_ORDER1" => "DESC",
+		"SORT_BY2" => "SORT",
+		"SORT_ORDER2" => "ASC",
+		"FILTER_NAME" => "",
+		"FIELD_CODE" => array("",""),
+		"PROPERTY_CODE" => array("adr","phones"),
+		"CHECK_DATES" => "Y",
 		"DETAIL_URL" => "",
-		"SECTION_ID_VARIABLE" => "SECTION_ID",
 		"AJAX_MODE" => "N",
 		"AJAX_OPTION_JUMP" => "N",
 		"AJAX_OPTION_STYLE" => "Y",
 		"AJAX_OPTION_HISTORY" => "N",
 		"CACHE_TYPE" => "A",
 		"CACHE_TIME" => "36000000",
+		"CACHE_FILTER" => "N",
 		"CACHE_GROUPS" => "Y",
+		"PREVIEW_TRUNCATE_LEN" => "",
+		"ACTIVE_DATE_FORMAT" => "m.d.Y",
 		"SET_TITLE" => "N",
 		"SET_BROWSER_TITLE" => "N",
 		"SET_META_KEYWORDS" => "N",
 		"SET_META_DESCRIPTION" => "N",
-		"ADD_SECTIONS_CHAIN" => "N",
 		"SET_STATUS_404" => "N",
-		"CACHE_FILTER" => "N",
-		"ACTION_VARIABLE" => "action",
-		"PRODUCT_ID_VARIABLE" => "id",
-		"PRICE_CODE" => array(
-		),
-		"USE_PRICE_COUNT" => "N",
-		"SHOW_PRICE_COUNT" => "1",
-		"PRICE_VAT_INCLUDE" => "Y",
-		"BASKET_URL" => "/personal/basket.php",
-		"USE_PRODUCT_QUANTITY" => "N",
-		"ADD_PROPERTIES_TO_BASKET" => "Y",
-		"PRODUCT_PROPS_VARIABLE" => "prop",
-		"PARTIAL_PRODUCT_PROPERTIES" => "N",
-		"PRODUCT_PROPERTIES" => array(
-		),
-		"DISPLAY_COMPARE" => "N",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+		"ADD_SECTIONS_CHAIN" => "N",
+		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+		"PARENT_SECTION" => "",
+		"PARENT_SECTION_CODE" => "",
+		"INCLUDE_SUBSECTIONS" => "N",
+		"DISPLAY_DATE" => "Y",
+		"DISPLAY_NAME" => "Y",
+		"DISPLAY_PICTURE" => "Y",
+		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"PAGER_TEMPLATE" => ".default",
 		"DISPLAY_TOP_PAGER" => "N",
-		"DISPLAY_BOTTOM_PAGER" => "Y",
-		"PAGER_TITLE" => "Товары",
+		"DISPLAY_BOTTOM_PAGER" => "N",
+		"PAGER_TITLE" => "Новости",
 		"PAGER_SHOW_ALWAYS" => "N",
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
-		"PAGER_SHOW_ALL" => "N",
-		"AJAX_OPTION_ADDITIONAL" => "",
-		"BROWSER_TITLE" => "-",
-		"META_KEYWORDS" => "-",
-		"META_DESCRIPTION" => "-",
-		"PRODUCT_QUANTITY_VARIABLE" => "quantity"
-	),
-	false
-);?>				
-			</footer>
+		"PAGER_SHOW_ALL" => "N"
+	)
+);?>		</footer>
 			<div id="form_send_review" class="popup_container" style="display: none;">
 				<div class="popup_header">Оставить отзыв</div>
 				<div class="form_review_top">
