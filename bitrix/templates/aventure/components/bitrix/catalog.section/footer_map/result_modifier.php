@@ -6,8 +6,9 @@ $cp = $this->__component; // объект компонента
 if (is_object($cp))
 {
     // добавим в arResult компонента два поля - MY_TITLE и IS_OBJECT
-    $cp->SetResultCacheKeys(array('NAME','PREVIEW_TEXT', 'DETAIL_TEXT'));
+	$this->__component->arResultCacheKeys = array_merge(
+			$this->__component->arResultCacheKeys, 
+			array('NAME','PREVIEW_TEXT', 'DETAIL_TEXT', 'ITEMS'));
 	
-	$arResult = $cp->arResult;
+	//$arResult = $cp->arResult;
 }
-?>

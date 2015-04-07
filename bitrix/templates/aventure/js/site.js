@@ -1,4 +1,4 @@
-ymaps.ready(init);
+//ymaps.ready(init);
 var myMap,
 myPlacemark_one,
 myPlacemark_two,

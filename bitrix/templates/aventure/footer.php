@@ -22,7 +22,11 @@
 		"SHOW_ALL_WO_SECTION" => "Y",
 		"PAGE_ELEMENT_COUNT" => "3",
 		"LINE_ELEMENT_COUNT" => "3",
-		"PROPERTY_CODE" => array(),
+		"PROPERTY_CODE" => array(
+			0 => "adr",
+			1 => "phones",
+			2 => "",
+		),
 		"OFFERS_LIMIT" => "5",
 		"SECTION_URL" => "",
 		"DETAIL_URL" => "",
@@ -146,8 +150,9 @@
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
 	<![endif]-->
 	
+	<!-- 
 	<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-			
+	-->	
 	<?php $APPLICATION->ShowHeadScripts();?>
 	</body>
 </html>
