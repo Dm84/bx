@@ -32,8 +32,8 @@ if (isset($_REQUEST['ajax']))
 		),
 		"PROPERTY_CODES_REQUIRED" => array(
 			0 => "NAME",
-//			1 => "PREVIEW_PICTURE",
-//			2 => "DETAIL_TEXT",
+			1 => "PREVIEW_PICTURE",
+			2 => "DETAIL_TEXT",
 			3 => "4",
 			4 => "13",
 		),

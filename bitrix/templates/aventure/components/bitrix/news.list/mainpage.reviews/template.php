@@ -1,10 +1,10 @@
 <?php 
-	if (!CModule::IncludeModule('iblock') || !CModule::IncludeModule('highloadblock')) die();
-	
-	use Bitrix\Highloadblock;
-	use Bitrix\Highloadblock\HighloadBlockTable;
-	use Bitrix\Main\Entity;
-	use Bitrix\Main\DB\Result;
+//	if (!CModule::IncludeModule('iblock') || !CModule::IncludeModule('highloadblock')) die();
+//	
+//	use Bitrix\Highloadblock;
+//	use Bitrix\Highloadblock\HighloadBlockTable;
+//	use Bitrix\Main\Entity;
+//	use Bitrix\Main\DB\Result;
 ?>
 <section class="main_reviews">
 	<div class="bls_centered_header">
@@ -51,10 +51,17 @@
 									?>
 									</span>
 								</div>
-								<div class="review_date"><?php echo $item['ACTIVE_FROM']; ?></div>
+								<div class="review_date"><?php echo $item['DISPLAY_ACTIVE_FROM']; ?></div>
 							</div>
 							<div class="review_short_tx">
-								<?php echo $item['PREVIEW_TEXT']; ?>
+								<?php 
+								if (!empty($item['PREVIEW_TEXT'])) {
+									echo $item['PREVIEW_TEXT']; 
+								} else
+								{
+									echo TruncateText($item['DETAIL_TEXT'], 700);
+								}
+								?>
 							</div>
 							<a href="<?php echo $item['DETAIL_PAGE_URL']; ?>">Читать полностью</a>
 						</div>
