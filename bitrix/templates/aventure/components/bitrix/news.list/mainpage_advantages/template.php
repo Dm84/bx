@@ -22,8 +22,10 @@
 						<?php echo $item['PROPERTIES']['count']['VALUE']; ?>
 					</span> 
 					<?php echo $item['NAME']; ?>
-				</div>				
+				</div>
+				<p>
 				<?php echo $item['PREVIEW_TEXT']; ?>
+				</p>
 			</div>
 			<?php endforeach; ?>
 		</div>

@@ -40,7 +40,7 @@ foreach ($localJs as $js)
 		?>
 		<title><?php $APPLICATION->ShowTitle()?></title>
 	</head>
-	<body class="<?php echo CSite::InDir(SITE_DIR) ? 'main_page' : ''; ?>">		
+	<body class="<?php echo $APPLICATION->GetCurPage(true) == SITE_DIR.'index.php' ? 'main_page' : ''; ?>">		
 		<div id="main">			
 			<header>
 				<div class="admin_panel">
@@ -48,7 +48,9 @@ foreach ($localJs as $js)
 				</div>
 				<div class="logo">
 					<a href="<?php echo SITE_DIR ?>">
-						<img src="<?php echo SITE_TEMPLATE_PATH.'/img/logo.png'?>" alt="<?php echo $arSite['SITE_NAME'] ?>">
+						<img src="<?php echo SITE_TEMPLATE_PATH.'/img/logo.png'?>" 
+							 alt="<?php echo $arSite['SITE_NAME'] ?>"
+							 title="<?php echo $arSite['SITE_NAME'] ?>">
 					</a>
 					<a href="#form_send_review" class="top_link_review win">Оставить отзыв</a>
 				</div>
