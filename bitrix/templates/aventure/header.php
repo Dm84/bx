@@ -32,8 +32,8 @@ foreach ($localJs as $js)
 ?><!DOCTYPE html>
 <html>
 	<head>
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,300,600,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
-
+		<meta http-equiv="Content-Type" content="text/html; charset=<?=LANG_CHARSET?>">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,300,600,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>		
 		<?php 
 			$APPLICATION->ShowCSS();
 			$APPLICATION->ShowHeadStrings();

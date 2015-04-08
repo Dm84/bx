@@ -4,7 +4,16 @@ if (isset($_REQUEST['ajax']))
 	require($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_before.php"); 
 }
 
+function utfConvert(& $item, $key) {
+	$item = iconv("UTF-8", "Windows-1251", $item);
+}
+
+array_walk_recursive($_REQUEST['PROPERTY'], 'utfConvert');
+
 ?>
+
+
+
 
 <?$APPLICATION->IncludeComponent(
 	"bitrix:iblock.element.add.form", 
@@ -22,20 +31,21 @@ if (isset($_REQUEST['ajax']))
 		"RESIZE_IMAGES" => "Y",
 		"PROPERTY_CODES" => array(
 			0 => "NAME",
-			1 => "PREVIEW_PICTURE",
-			2 => "DETAIL_TEXT",
-			3 => "3",
+			1 => "DETAIL_TEXT",
+			2 => "3",
+			3 => "16",
 			4 => "5",
 			5 => "14",
 			6 => "4",
 			7 => "13",
+			8 => "15",
 		),
 		"PROPERTY_CODES_REQUIRED" => array(
-			0 => "NAME",
-			1 => "PREVIEW_PICTURE",
-			2 => "DETAIL_TEXT",
-			3 => "4",
-			4 => "13",
+			0 => "DETAIL_TEXT",
+			1 => "16",
+			2 => "4",
+			3 => "13",
+			4 => "15",
 		),
 		"GROUPS" => array(
 			0 => "2",
@@ -49,13 +59,13 @@ if (isset($_REQUEST['ajax']))
 		"DETAIL_TEXT_USE_HTML_EDITOR" => "N",
 		"SEF_MODE" => "N",
 		"SEF_FOLDER" => "/",
-		"CUSTOM_TITLE_NAME" => "Имя",
+		"CUSTOM_TITLE_NAME" => "",
 		"CUSTOM_TITLE_TAGS" => "",
-		"CUSTOM_TITLE_DATE_ACTIVE_FROM" => "Дата",
+		"CUSTOM_TITLE_DATE_ACTIVE_FROM" => "",
 		"CUSTOM_TITLE_DATE_ACTIVE_TO" => "",
 		"CUSTOM_TITLE_IBLOCK_SECTION" => "",
-		"CUSTOM_TITLE_PREVIEW_TEXT" => "Текст отзыва",
-		"CUSTOM_TITLE_PREVIEW_PICTURE" => "Фото с вами",
+		"CUSTOM_TITLE_PREVIEW_TEXT" => "",
+		"CUSTOM_TITLE_PREVIEW_PICTURE" => "",
 		"CUSTOM_TITLE_DETAIL_TEXT" => "Текст отзыва",
 		"CUSTOM_TITLE_DETAIL_PICTURE" => ""
 	),
