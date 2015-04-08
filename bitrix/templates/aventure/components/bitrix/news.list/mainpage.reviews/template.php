@@ -37,14 +37,17 @@
 									<span><?php echo $item['PROPERTIES']['place']['VALUE']; ?>,
 									<?php 
 										$data = $item['PROPERTIES']['country'];
-										$hlblock = HighloadBlockTable::getById(1)->fetch(); 
-										$entity = HighloadBlockTable::compileEntity($hlblock);
-										$hlDataClass = $entity->getDataClass();//$hldata['NAME'].'Table';
+																				
+//										$hlblock = HighloadBlockTable::getById(1)->fetch(); 
+//										$entity = HighloadBlockTable::compileEntity($hlblock);
+//										$hlDataClass = $entity->getDataClass();//$hldata['NAME'].'Table';
 										
 										/* @var $result Result */
-										$result = $hlDataClass::getById($data['VALUE']);
-										$fetch = $result->fetch();										
-										echo $fetch['UF_NAME'];
+//										$result = $hlDataClass::getById($data['VALUE']);
+//										$fetch = $result->fetch();										
+//										echo $fetch['UF_NAME'];
+										
+										echo $data['VALUE'];
 									?>
 									</span>
 								</div>

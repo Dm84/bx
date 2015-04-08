@@ -1,4 +1,8 @@
 jQuery(document).ready(function() {
+
+	$('#form_send_review').ajaxForm({
+		target: '#form_send_review'
+	});
 	
 	$('.main_slider').slick({
 		dots: false,

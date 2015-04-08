@@ -85,13 +85,13 @@ endif;
 <?php
 if ($arParams['DEV_MODE'] == 'Y'):
 ?>
-function BXMapLoader_<?echo $arParams['MAP_ID']?>()
+function BXMapLoader_<?php echo $arParams['MAP_ID']?>()
 {
 	if (null == window.bYandexMapScriptsLoaded)
 	{
 		function _wait_for_map(){
 			if (window.ymaps && window.ymaps.Map)
-				init_<?echo $arParams['MAP_ID']?>();
+				init_<?php echo $arParams['MAP_ID']?>();
 			else
 				setTimeout(_wait_for_map, 50);
 		}
@@ -100,7 +100,7 @@ function BXMapLoader_<?echo $arParams['MAP_ID']?>()
 	}
 	else
 	{
-		init_<?echo $arParams['MAP_ID']?>();
+		init_<?php echo $arParams['MAP_ID']?>();
 	}
 }
 <?php
@@ -114,13 +114,13 @@ function BXMapLoader_<?echo $arParams['MAP_ID']?>()
 <?php
 	else:
 ?>
-	BX.ready(BXMapLoader_<?echo $arParams['MAP_ID']?>);
-<?
+	BX.ready(BXMapLoader_<?php echo $arParams['MAP_ID']?>);
+<?php
 	endif;
 else: // $arParams['DEV_MODE'] == 'Y'
 ?>
-	ymaps.ready(init_<?echo $arParams['MAP_ID']?>);
-<?
+	ymaps.ready(init_<?php echo $arParams['MAP_ID']?>);
+<?php
 endif; // $arParams['DEV_MODE'] == 'Y'
 ?>
 
@@ -135,4 +135,9 @@ function BXMapYandexAfterShow(mapId)
 }
 
 </script>
-<div id="BX_YMAP_<?echo $arParams['MAP_ID']?>" class="bx-yandex-map" style="height: <?echo $arParams['MAP_HEIGHT'];?>; width: <?echo $arParams['MAP_WIDTH']?>;"><?echo GetMessage('MYS_LOADING'.($arParams['WAIT_FOR_EVENT'] ? '_WAIT' : ''));?></div>
+<div id="BX_YMAP_<?php echo $arParams['MAP_ID']?>" 
+	 class="bx-yandex-map" 
+	 style="height: <?php echo $arParams['MAP_HEIGHT'];?>; 
+			width: <?php echo $arParams['MAP_WIDTH']?>;">
+				<?php echo GetMessage('MYS_LOADING'.($arParams['WAIT_FOR_EVENT'] ? '_WAIT' : ''));?>
+</div>

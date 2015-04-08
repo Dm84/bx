@@ -17,6 +17,7 @@ foreach ($css as $path)
 $localJs = array (
 	'jquery-1.9.0.min.js',
 	'jquery.fancybox.js',
+	'jquery.form.js',
 	'slick.js',
 	'script.js',
 	'site.js',
