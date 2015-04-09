@@ -21,7 +21,7 @@
 			<div class="form_review_left_col">
 				<div class="form_pole_item">
 					<p>Ваше имя</p>
-					<input name="PROPERTY[NAME]" type="hidden" class="popup_input" 
+					<input name="PROPERTY[NAME][0]" type="hidden" class="popup_input" 
 						   value="Заполненная форма отзыва">
 					<input type="text" name="PROPERTY[16][0]" class="popup_input" 
 						   value="<?php echo $arResult['ELEMENT_PROPERTIES'][16][0]['VALUE']; ?>">

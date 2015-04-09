@@ -1,5 +1,4 @@
 <?php 
-
 $include_prolog = false;
 
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) { $include_prolog = true; }
