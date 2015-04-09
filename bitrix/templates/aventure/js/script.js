@@ -1,7 +1,10 @@
 jQuery(document).ready(function() {
 
 	$('#form_send_review').ajaxForm({
-		target: '#form_send_review'
+		target: '#form_send_review',
+		data: {
+			ajax: 1
+		}
 	});
 	
 	$('.main_slider').slick({

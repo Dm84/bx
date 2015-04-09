@@ -1,5 +1,10 @@
 <?php 
-if (isset($_REQUEST['ajax']))
+
+$include_prolog = false;
+
+if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) { $include_prolog = true; }
+
+if ($include_prolog === true)
 {
 	require($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_before.php"); 
 }
@@ -11,9 +16,6 @@ function utfConvert(& $item, $key) {
 array_walk_recursive($_REQUEST['PROPERTY'], 'utfConvert');
 
 ?>
-
-
-
 
 <?$APPLICATION->IncludeComponent(
 	"bitrix:iblock.element.add.form", 
@@ -58,7 +60,7 @@ array_walk_recursive($_REQUEST['PROPERTY'], 'utfConvert');
 		"PREVIEW_TEXT_USE_HTML_EDITOR" => "N",
 		"DETAIL_TEXT_USE_HTML_EDITOR" => "N",
 		"SEF_MODE" => "N",
-		"SEF_FOLDER" => "/",
+		"SEF_FOLDER" => "",
 		"CUSTOM_TITLE_NAME" => "",
 		"CUSTOM_TITLE_TAGS" => "",
 		"CUSTOM_TITLE_DATE_ACTIVE_FROM" => "",
@@ -73,7 +75,7 @@ array_walk_recursive($_REQUEST['PROPERTY'], 'utfConvert');
 );?>
 
 <?php 
-if (isset($_REQUEST['ajax']))
+if ($include_prolog === true)
 {
 	require($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/epilog_after.php");
 }

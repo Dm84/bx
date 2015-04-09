@@ -7,8 +7,8 @@
 //	use Bitrix\Main\DB\Result;
 
 	$author = $item['PROPERTIES']['name']['VALUE'].' '.$item['PROPERTIES']['last_name']['VALUE'];
-	$photo = CFile::ResizeImageGet($item['PROPERTIES']['photo']['VALUE'], array('width' => 82), 
-			BX_RESIZE_IMAGE_PROPORTIONAL_ALT);
+	$photo = CFile::ResizeImageGet($item['PROPERTIES']['photo']['VALUE'], array('width' => 82, 'height' => 160), 
+			BX_RESIZE_IMAGE_PROPORTIONAL);
 ?>
 
 <div class="rev_carousel">

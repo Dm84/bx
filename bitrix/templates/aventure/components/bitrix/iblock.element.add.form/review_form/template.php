@@ -11,7 +11,7 @@
 		?>
 		</div>
 			
-	<form name="iblock_add" action="<?php echo SITE_DIR; ?>review_form.php?ajax=1" method="post" enctype="multipart/form-data">
+	<form name="iblock_add" action="<?php echo SITE_DIR; ?>review_form.php" method="post" enctype="multipart/form-data">
 			<?php echo bitrix_sessid_post() ?>
 			<?php if ($arParams["MAX_FILE_SIZE"] > 0): ?>
 				<input type="hidden" name="MAX_FILE_SIZE" value="<?= $arParams["MAX_FILE_SIZE"] ?>" />
